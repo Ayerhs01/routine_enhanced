@@ -1,12 +1,24 @@
 <!DOCTYPE html>
     <html>
         <head>
-            <title>MY ROUTINE</title>
-            <link rel="stylesheet" href="./style2.css"
+            <meta name="viewport" content="width=device-width, initial-scale=1">
+            <title>MY ROUTINE</title>            
+            <link rel="stylesheet" href="./style_fall.css">
+            
         </head>
 
         <body>
             <h1>Weekly Routine</h1>
+            
+            <!--Button to Jump to today-->
+            <div class="toolbar">
+                <button id="jumpToday" type="button">Jump to Today</button>
+                <span class="hint">Tip: scroll sideways on mobile</span>
+            </div>
+
+
+            <!------------------------------------------------------------------------------->
+
             <div class="table-wrap">
                 <!-- This is a table for grid format calendar-->
                 <table class="planner">
@@ -14,315 +26,280 @@
                         <tr>
                             <th scope="col">Category</th>
                             <th scope="col">Sections</th>
-                            <th scope="col">Monday</th>
-                            <th scope="col">Tuesday</th>
-                            <th scope="col">Wednesday</th>
-                            <th scope="col">Thursday</th>
-                            <th scope="col">Friday</th>
-                            <th scope="col">Saturday</th>
-                            <th scope="col">Sunday</th>
+                            <th scope="col" id="mon">Monday</th>
+                            <th scope="col" id="tue">Tuesday</th>
+                            <th scope="col" id="wed">Wednesday</th>
+                            <th scope="col" id="thu">Thursday</th>
+                            <th scope="col" id="fri">Friday</th>
+                            <th scope="col" id="sat">Saturday</th>
+                            <th scope="col" id="sun">Sunday</th>
                         </tr>
                     </thead>
                     <tbody>    
                         <tr class="skincare">
                             <th scope="row" rowspan="2">Skin Care</th>
+                            
+                            <!--SECTIONS-->
                             <td>Morning</td>
-                            <!--Monday morning-->
-                            <td>
-                                <ol>
-                                    <li>Cleanse</li>
-                                    <li>Niacinamide</li>
-                                    <li>CeraVe Moisturizer</li>
-                                    <li>Sunscreen</li>
-                                </ol>
-                            </td>
-
-                            <!--Tuesday morning-->
-                            <td>
-                                <ol>
-                                    <li>Cleanse</li>
-                                    <li>CeraVe Moisturizer</li>
-                                    <li>Sunscreen</li>
-                                </ol>
-                            </td>   
                             
-                            <!--Wednesday morning-->
-                            <td>
-                                <ol>
-                                    <li>Cleanse</li>
-                                    <li>Niacinamide</li>
-                                    <li>CeraVe Moisturizer</li>
-                                    <li>Sunscreen</li>
-                                </ol>
-                            </td>  
+                            <td data-key="mon-morning"></td>
+                            <td data-key="tue-morning"></td>
+                            <td data-key="wed-morning"></td>
+                            <td data-key="thu-morning"></td>
+                            <td data-key="fri-morning"></td>
+                            <td data-key="sat-morning"></td>
+                            <td data-key="sun-morning"></td>
 
-                            <!--Thursday morning-->
-                            <td>
-                                <ol>
-                                    <li>Cleanse</li>
-                                    <li>CeraVe Moisturizer</li>
-                                    <li>Sunscreen</li>
-                                </ol>
-                            </td>       
-                            
-                            <!--Friday morning-->
-                            <td>
-                                <ol>
-                                    <li>Cleanse</li>
-                                    <li>Niacinamide</li>
-                                    <li>CeraVe Moisturizer</li>
-                                    <li>Sunscreen</li>
-                                </ol>
-                            </td>
-
-                            <!--Saturday morning-->
-                            <td>
-                                <ol>
-                                    <li>Cleanse</li>
-                                    <li>CeraVe Moisturizer</li>
-                                    <li>Sunscreen</li>
-                                </ol>
-                            </td>
-
-                            <!--Sunday morning-->
-                            <td>
-                                <ol>
-                                    <li>Cleanse</li>
-                                    <li>Niacinamide</li>
-                                    <li>CeraVe Moisturizer</li>
-                                    <li>Sunscreen</li>
-                                </ol>
-                            </td>
                         </tr>
+
+                        <!------------------------------------------------------------------------------->
                         <tr class="skincare">
                             <td>Night</td>
-                            <!--Monday Night-->
-                            <td>
-                                <ol>
-                                    <li>Cleanse</li>
-                                    <li>Toner(optional)</li>
-                                    <li>CeraVe Moisturizer</li>                                
-                                </ol>
-                            </td>
 
-                            <!--Tuesday Night-->
-                            <td>
-                                <ol>
-                                    <li>Cleanse</li>
-                                    <li>BHA (sit ~30 sec)</li>
-                                    <li>CeraVe Moisturizer</li>                                
-                                </ol>
-                            </td>
+                            <td data-key="mon-night"></td>
+                            <td data-key="tue-night"></td>
+                            <td data-key="wed-night"></td>
+                            <td data-key="thu-night"></td>
+                            <td data-key="fri-night"></td>
+                            <td data-key="sat-night"></td>
+                            <td data-key="sun-night"></td>
 
-                            <!--Wednesday Night-->
-                            <td>
-                                <ol>
-                                    <li>Cleanse</li>
-                                    <li>CeraVe Moisturizer</li>                                
-                                </ol>
-                            </td>
-
-                            <!--Thursday Night-->
-                            <td>
-                                <ol>
-                                    <li>Cleanse</li>
-                                    <li>Toner(optional)</li>
-                                    <li>Differin (retinoid)</li>
-                                    <li>CeraVe Moisturizer</li>                                
-                                </ol>
-                            </td>
-
-                            <!--Friday Night-->
-                            <td>
-                                <ol>
-                                    <li>Cleanse</li>
-                                    <li>Toner(optional)</li>
-                                    <li>CeraVe Moisturizer</li>                                
-                                </ol>
-                            </td>
-
-                            <!--Saturday Night-->
-                            <td>
-                                <ol>
-                                    <li>Cleanse</li>
-                                    <li>BHA</li>
-                                    <li>CeraVe Moisturizer</li>                                
-                                </ol>
-                            </td>
-
-                            <!--Sunday Night-->
-                            <td>
-                                <ol>
-                                    <li>Cleanse</li>
-                                    <li>Toner (optional)</li>
-                                    <li>Differin (retinoid)</li>
-                                    <li>CeraVe Moisturizer</li>
-                                </ol>
-                            </td>
                         </tr>
+
+                        <!------------------------------------------------------------------------------->
                         <tr class="exercise">
                             <th scope="row" rowspan="3">Exercise</th>
-                            <td>Warm-up (5-min)</td>
 
-                            <!--Monday-->
-                            <td>
-                                <ol>
-                                    <li>Vibrating plate (2-min)</li>
-                                    <li>Rowing machine (3-min)</li>
-                                </ol>
-                            </td>
+                            <!--SECTIONS-->
+                            <td>Warm-UP (5-min)</td>
 
-                            <!--Tueday-->
-                            <td>
-                                <ol>
-                                    <li>Vibrating plate (2-min)</li>
-                                    <li>Rowing Machine (3-min)</li>
-                                </ol>
-                            </td>
+                            <td data-key="mon-warmup"></td>
+                            <td data-key="tue-warmup"></td>
+                            <td data-key="wed-warmup"></td>
+                            <td data-key="thu-warmup"></td>
+                            <td data-key="fri-warmup"></td>
+                            <td data-key="sat-warmup"></td>
+                            <td data-key="sun-warmup"></td>
 
-                            <!--Wednesday-->
-                            <td>Rest</td>
-                            
-                            <!--Thursday-->
-                            <td>
-                                <ol>
-                                    <li>Vibrating plate (2-min)</li>
-                                    <li>Rowing Machine (3-min)</li>
-                                </ol>
-                            </td>
 
-                            <!--Friday-->
-                            <td>
-                                <ol>
-                                    <li>Vibrating plate (2-min)</li>
-                                    <li>Rowing Machine (3-min)</li>
-                                </ol>
-                            </td>
-
-                            <!--Saturday-->
-                            <td>Chores</td>
-
-                            <!--Sunday-->
-                            <td>
-                                <ol>
-                                    <li>Vibrating plate (2-min)</li>
-                                    <li>Rowing Machine (3-min)</li>
-                                </ol>
-                            </td>
                         </tr>
+
+                        <!------------------------------------------------------------------------------->
                         <tr class="exercise">
-                            <td>Strength (2 rounds each)</td>
-                            <!--Monday: leg-->
-                            
-                            <td>
-                                <ol>
-                                    <li>Glute bridges (12 reps-- 2 sec pause at top)</li>
-                                    <li>Chair squats (8-10 rep)</li>
-                                    <li>Reverse lunges (6 reps/side)</li>
-                                    <li>Standing Side Leg Raises (8-10 rep)</li>
-                                </ol>
-                            </td>
+                            <td>Strength (2-Rounds)</td>
 
-                            <!--Tuesday: arm-->
-                            <td>
-                                <ol>
-                                    <li>Wall push-ups (8-10 rep)</li>
-                                    <li>Elbow pull-backs (10 rep)</li>
-                                    <li>Overhead arm hold (20-30 sec)</li>
-                                    <li>Hand strength (1-min)</li>
-                                </ol>
-                            </td>
+                            <td data-key="mon-main"></td>
+                            <td data-key="tue-main"></td>
+                            <td data-key="wed-main"></td>
+                            <td data-key="thu-main"></td>
+                            <td data-key="fri-main"></td>
+                            <td data-key="sat-main"></td>
+                            <td data-key="sun-main"></td>
 
-                            <!--Wednesday: rest-->
-                            <td>Rest</td>
-                            
-                            <!--Thursday: leg-->
-                            <td>
-                                <ol>
-                                    <li>Glute bridges (12 reps-- 2 sec pause at top)</li>
-                                    <li>Chair squats (8-10 rep)</li>
-                                    <li>Reverse lunges (6 reps/side)</li>
-                                    <li>Clamshells (10-12 rep/side)</li>
-                                </ol>
-                            </td>
-
-                            <!--Friday: arm-->
-                            <td>
-                                <ol>
-                                    <li>Wall push-ups (8-10 rep)</li>
-                                    <li>Elbow pull-backs (10 rep)</li>
-                                    <li>Overhead arm hold (20-30 sec)</li>
-                                    <li>Hand strength (1-min)</li>
-                                </ol>
-                            </td>
-
-                            <!--Saturday: rest/chores-->
-                            <td>Chores</td>
-                            
-                            <!--Sunday: leg-->
-                            <td>
-                                <ol>
-                                    <li>Glute bridges (12 reps-- 2 sec pause at top)</li>
-                                    <li>Chair squats (8-10 rep)</li>
-                                    <li>Reverse lunges (6 reps/side)</li>
-                                    <li>Clamshells (10-12 rep/side)</li>
-                                </ol>
-                            </td>
                         </tr>
 
+                        <!------------------------------------------------------------------------------->
                         <tr class="exercise">
-                            <td>Core & Cooldown</td>
-                            <!--Monday: leg-->
-                            <td>
-                                <ol>
-                                    <li>Dead Bugs (6 reps/side)</li>
-                                    <li>Standing belly breathing (2 min)</li>
-                                </ol>
-                            </td>
+                            <td>Core + Cooldown (3-mins)</td>
 
-                            <!--Tuesday: arm-->
-                            <td>
-                                <ol>
-                                    <li>Clamshells (8-10 rep/side)</li>
-                                    <li>Standing belly breathing (2-min)</li>
-                                    <li><strong>(Optional) </strong>Glute bridges (8-10 rep)</li>
-                                </ol>
-                            </td>
-
-                            <!--Wednesday: rest/gentle movement-->
-                            <td>Rest</td>
-
-                            <!--Thursday: leg-->
-                            <td>
-                                <ol>
-                                    <li>Dead Bugs (6 rep/side)</li>
-                                    <li>Standing belly breathing (2 min)</li>
-                                </ol>
-                            </td>
-
-                            <!--Friday: arm-->
-                            <td>
-                                <ol>
-                                    <li>Clamshells (8-10 rep/side)</li>
-                                    <li>Standing belly breathing (2-min)</li>
-                                    <li><strong>(Optional) </strong>Glute bridges (8-10 rep)</li>
-                                </ol>
-                            </td>
-                            
-                            <!--Saturday: rest-->
-                            <td>Chores</td>
-
-                            <!--Sunday: gentle leg-->
-                            <td>
-                                <ol>
-                                    <li>Dead Bugs (6 reps/side)</li>
-                                    <li>Standing belly breathing (2 min)</li>
-                                </ol>
-                            </td>
+                            <td data-key="mon-core"></td>
+                            <td data-key="tue-core"></td>
+                            <td data-key="wed-core"></td>
+                            <td data-key="thu-core"></td>
+                            <td data-key="fri-core"></td>
+                            <td data-key="sat-core"></td>
+                            <td data-key="sun-core"></td>
 
                         </tr>
+
+                        <!------------------------------------------------------------------------------->
                     </tbody>
                 </table>
             </div>
+
+            <!------------------------------------------------------------------------------------------->
+            <div id="editText" class="hidden text">
+                <div class="text-card">
+                    <h3>Edit Routine</h3>
+                    <textarea id="edit" rows="10" placeholder="Enter 1 step per line"></textarea>
+                    <div class="actions">
+                        <button id="saveRoutine">Save</button>
+                        <button id="close" type="button">Cancel</button>
+                    </div>
+                </div>
+
+            </div>
+
+
+
+            <!------------------------------------------------------------------------------------------->
+            <!--This code is AI generated-->
+            <script>
+                document.addEventListener("DOMContentLoaded", () => {
+                // ---------- Storage ----------
+                const planner = JSON.parse(localStorage.getItem("planner") || "{}");
+                const savePlanner = () => localStorage.setItem("planner", JSON.stringify(planner));
+
+                // ---------- Elements ----------
+                const table = document.querySelector("table.planner");
+
+                // Your modal editor elements (these match your HTML)
+                const modal = document.getElementById("editText");
+                const editor = document.getElementById("edit");
+                const btnSave = document.getElementById("saveRoutine");
+                const btnClose = document.getElementById("close");
+
+                let currentKey = null;
+                let currentCell = null;
+
+                // ---------- Render helpers ----------
+                function renderCell(cell) {
+                    const key = cell.dataset.key;
+                    const entry = planner[key] || { items: [], rest: false };
+
+                    // Remove any existing routine display (but keep the rest button)
+                    // We'll rebuild the content area each time.
+                    const existingContent = cell.querySelector(".cell-content");
+                    if (existingContent) existingContent.remove();
+
+                    const content = document.createElement("div");
+                    content.className = "cell-content";
+
+                    if (entry.rest) {
+                    cell.classList.add("is-rest");
+                    // No list needed; CSS overlay will show "Rest"
+                    } else {
+                    cell.classList.remove("is-rest");
+                    if (entry.items && entry.items.length) {
+                        const ol = document.createElement("ol");
+                        entry.items.forEach((item) => {
+                        const li = document.createElement("li");
+                        li.textContent = item;
+                        ol.appendChild(li);
+                        });
+                        content.appendChild(ol);
+                    }
+                    }
+
+                    cell.insertBefore(content, cell.firstChild);
+                }
+
+                function renderAllCells() {
+                    document.querySelectorAll("td[data-key]").forEach(renderCell);
+                }
+
+                // ---------- 1) Today highlight + Jump ----------
+                const dayIds = ["sun", "mon", "tue", "wed", "thu", "fri", "sat"];
+                const todayId = dayIds[new Date().getDay()];
+                const th = document.getElementById(todayId);
+                
+                if (th && table) {
+                    th.classList.add("is-today");
+                    document.querySelectorAll(`td[data-key^="${todayId}-"]`)
+                    .forEach((cell) => cell.classList.add("is-today"));
+
+                    document.getElementById("jumpToday")?.addEventListener("click", () => {
+                    const wrap = document.querySelector(".table-wrap");
+                    if (!wrap) return;
+
+                    const targetLeft = th.getBoundingClientRect().left;
+                    const wrapLeft = wrap.getBoundingClientRect().left;
+                    wrap.scrollLeft += (targetLeft - wrapLeft) - 160;
+                    });
+
+                }
+
+                // ---------- 2) Rest toggles + click-to-edit ----------
+                document.querySelectorAll("td[data-key]").forEach((cell) => {
+                    const key = cell.dataset.key;
+
+                    // Create moon toggle button
+                    const btn = document.createElement("button");
+                    btn.className = "rest-toggle";
+                    btn.type = "button";
+                    btn.innerText = "☾";
+                    cell.appendChild(btn);
+
+                    // Ensure data exists
+                    if (!planner[key]) planner[key] = { items: [], rest: false };
+
+                    // Initial state
+                    if (planner[key].rest) cell.classList.add("is-rest");
+
+                    btn.addEventListener("click", (e) => {
+
+                        e.stopPropagation(); // don't open editor
+
+                        btn.classList.add("popped");
+                        setTimeout(() => btn.classList.remove("popped"), 200);
+                        planner[key].rest = !planner[key].rest;
+                        savePlanner();
+                        renderCell(cell);
+                    });
+
+                    // Click cell opens modal editor
+                    cell.addEventListener("click", () => {
+                        if (planner[key]?.rest) {
+                            const ok = confirm("This is a rest day. Please turn off the rest to edit this routine.");
+                            if (!ok) return;
+
+                            planner[key].rest = false;
+                            savePlanner();
+                            renderCell(cell);
+                        }
+                        
+                        currentKey = key;
+                        currentCell = cell;
+
+                        // Load existing items into textarea
+                        const items = planner[currentKey]?.items || [];
+                        editor.value = items.join("\n");
+
+                        // Open modal
+                        modal.classList.remove("hidden");
+                        editor.focus();
+                    });
+                });
+
+                // ---------- 3) Modal actions ----------
+                function closeModal() {
+                    modal.classList.add("hidden");
+                    currentKey = null;
+                    currentCell = null;
+                }
+
+                btnClose?.addEventListener("click", closeModal);
+
+                // Click outside the card closes modal
+                modal?.addEventListener("click", (e) => {
+                    if (e.target === modal) closeModal();
+                });
+
+                // ESC closes
+                document.addEventListener("keydown", (e) => {
+                    if (!modal.classList.contains("hidden") && e.key === "Escape") closeModal();
+                });
+
+                btnSave?.addEventListener("click", () => {
+                    if (!currentKey || !currentCell) return;
+
+                    const lines = editor.value
+                    .split("\n")
+                    .map((s) => s.trim())
+                    .filter(Boolean);
+
+                    if (!planner[currentKey]) planner[currentKey] = { items: [], rest: false };
+
+                    planner[currentKey].items = lines;
+                    planner[currentKey].rest = false;
+                    savePlanner();
+                    renderCell(currentCell);
+                    closeModal();
+                });
+
+                // ---------- Initial render ----------
+                renderAllCells();
+                });
+            </script>
         </body>
     </html>

@@ -1,8 +1,7 @@
 # Weekly Routine
 
 ## Preview
-![Planner Screenshot](./routine_preview.png)
-
+Coming Soon!
 
 -----------------------------------------------------------------------
 
@@ -17,8 +16,7 @@ The planner helps track:
 -----------------------------------------------------------------------
 
 ## Page
-https://ayerhs01.github.io/Basic_routine_website/
-
+Coming Soon!
 
 -----------------------------------------------------------------------
 
@@ -28,7 +26,7 @@ https://ayerhs01.github.io/Basic_routine_website/
 - [x] Sticky planner layout
 - [x] Fall theme Style
 - [ ] Dark Mode theme
-- [ ] Mobile responsiveness
+- [X] Mobile responsiveness
 
 
 -----------------------------------------------------------------------
