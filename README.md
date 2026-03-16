@@ -1,7 +1,7 @@
 # Weekly Routine
 
 ## Preview
-Coming Soon!
+![Planner Screenshot](./routine_enhanced.png)
 
 -----------------------------------------------------------------------
 
